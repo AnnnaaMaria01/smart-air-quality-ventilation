@@ -27,6 +27,10 @@ The system was developed as part of my bachelor's thesis. Its purpose is to main
 - 12 V DC fan
 - External 12 V power supply
 
+## Hardware Setup
+
+![Hardware setup](docs/hardware_setup.jpeg)
+
 ## System Overview
 
 The MH-Z19C sensor measures the CO2 concentration inside the test enclosure and sends the value to the ESP32 through UART communication.
@@ -77,6 +81,10 @@ This ensures that the fan receives enough power to start whenever ventilation is
 | L298N ENA | GPIO 25 |
 | L298N IN1 | GPIO 32 |
 | L298N IN2 | GPIO 33 |
+
+## Wiring Diagram
+
+![Wiring diagram](docs/wiring_diagram.png)
 
 ## Required Libraries
 
@@ -130,6 +138,14 @@ Static gain: -5.96 ppm/%
 Experimental tests showed that the system was able to reduce the CO2 concentration from approximately 1500-1800 ppm toward the 1000 ppm setpoint.
 
 The controller produced a stable response without significant oscillations and gradually reduced the fan command as the CO2 concentration approached the reference value.
+
+### CO2 Response
+
+![CO2 response](docs/co2_response.png)
+
+### PID Terms
+
+![PID terms](docs/pid_terms.png)
 
 ## Limitations
 
